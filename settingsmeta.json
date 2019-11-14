@@ -1,0 +1,43 @@
+{
+
+  "skillMetadata": {
+      "sections": [
+          {
+              "name": "Login",
+              "fields": [
+                  {
+                        "name": "protocol",
+                        "type": "select",
+                        "label": "Protocol:",
+                        "options": "HTTP (default)|http;HTTPS (experimental)|https;TELNET (experimental)|telnet",
+                        "value": "http"
+                  },
+                  {
+                      "name": "host",
+                      "type": "text",
+                      "label": "Host address",
+                      "value": "localhost"
+                  },
+                  {
+                      "name": "username",
+                      "type": "text",
+                      "label": "User name",
+                      "value": ""
+                  },
+                  {
+                      "name": "password",
+                      "type": "password",
+                      "label": "Password",
+                      "value": ""
+                  },
+                  {
+                      "name": "portnum",
+                      "type": "number",
+                      "label": "Port number",
+                      "value": "5005"
+                  }
+              ]
+          }
+      ]
+  }
+}

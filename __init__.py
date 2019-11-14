@@ -25,8 +25,12 @@ class RasaSkill(MycroftSkill):
     # The constructor of the skill, which calls MycroftSkill's constructor
     def __init__(self):
         super(RasaSkill, self).__init__(name="RasaSkill")
+        self.settings["host"] = self.settings.get('host', 'localhost')
+        self.settings["username"] = self.settings.get('username', None)
+        self.settings["password"] = self.settings.get('password', None)
+        self.settings["portnum"] = self.settings.get('portnum', "5005")
         self.conversation_active = False
-        self.rasa_host = "http://localhost:5005/"
+        self.rasa_host = "http://"+self.settings["host"]+":"+self.settings["portnum"]+"/"
         self.append_endpoint = (
             self.rasa_host + "conversations/mycroft_user/messages?include_events=NONE"
         )
